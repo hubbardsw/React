@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person.jsx'
 import './Person/Person.css'
+import PersonList from './Components/PersonList.jsx'
+import PersonsInput from './Components/PersonsInput'
 
 class App extends Component {
   state = {
@@ -55,6 +57,8 @@ class App extends Component {
               name={this.state.persons[1].name} 
               age={this.state.persons[1].age}
               click={this.switchNameHandler.bind(this, 'A Cool Dude')}></Person>
+              <PersonsInput />
+              <PersonList />
       </div>
     );
   }
