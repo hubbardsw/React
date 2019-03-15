@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person.jsx'
 import './Person/Person.css'
-import PersonList from './Components/PersonList.jsx'
+import Vehicles from './Components/Vehicles.jsx'
 import PersonsInput from './Components/PersonsInput'
 
 class App extends Component {
@@ -58,7 +58,7 @@ class App extends Component {
               age={this.state.persons[1].age}
               click={this.switchNameHandler.bind(this, 'A Cool Dude')}></Person>
               <PersonsInput />
-              <PersonList />
+              <Vehicles />
       </div>
     );
   }
