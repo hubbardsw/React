@@ -22,6 +22,21 @@
 .App-link {
   color: #61dafb;
 }
+.delete{
+  background-color: #dc3545
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px !important;
+  border-radius: 15px !important;
+  margin-right: 5px !important;
+  text-align: center !important;
+  font-size: 12px !important;
+  line-height: 1.42857 !important;
+}
+
 
 .vehicle-item {
   border: gray solid 1px;
