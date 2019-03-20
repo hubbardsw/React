@@ -6,10 +6,12 @@ import { faTrash} from '@fortawesome/free-solid-svg-icons'
 library.add(faTrash)
 
 export default class Vehicles extends React.Component {
-  state = {
+  constructor(props){
+  super(props)
+  this.state = {
     items: []
   };
-
+}
   componentDidMount() {
     axios
       .get('http://sabioapi2.azurewebsites.net/api/entities/vehicles',
@@ -31,6 +33,30 @@ export default class Vehicles extends React.Component {
     vehicle.splice(index, 1)
     this.setState({items:vehicle})
   }
+
+  /*addVehicle = () => {
+    const obj = {
+
+      make: "Tesla",
+      model: "X-periment",
+      year: "2030"
+    }
+
+    axios.post('http://sabioapi2.azurewebsites.net/api/entities/vehicles', obj, {
+      headers: {"sabio-auth": "UFV44SCCS"}
+    })
+    .then(res => console.log(res.data));
+    
+
+
+
+    })
+
+
+
+  }*/
+
+
 
   render(){
    const vehicleList = this.state.items.map((item, index) => {
